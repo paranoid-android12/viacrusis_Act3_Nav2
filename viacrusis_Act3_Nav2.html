@@ -19,12 +19,9 @@
                 user-select: none;
             }
 
-            .products-subnav{
+            .products-subnav, .products-nested-subnav, .products-nested-subnav2{
                 display: none;
-            }
-
-            .products-nested-subnav{
-                display: none;
+                
             }
 
             li:hover {
@@ -35,15 +32,22 @@
             li:hover > .products-subnav{
                 display: block;
                 position: absolute;
-                left: 187px;
+                left: 189px;
                 top: 55px;
             }
 
-            .product1:hover .products-nested-subnav{
+            .product:hover .products-nested-subnav{
                 display: block;
                 position: absolute;
                 top: 0px;
-                left: 180px;
+                left: 182px;
+            }
+
+            .product1:hover .products-nested-subnav2{
+                display: block;
+                position: absolute;
+                top: 40px;
+                left: 182px;
             }
         </style>
     </head>
@@ -54,14 +58,20 @@
             <li>
                 PRODUCTS
                 <ul class="products-subnav">
-                    <li class="product1">
+                    <li class="product">
                         PRODUCT 1
                         <ul class="products-nested-subnav">
                             <li>SUB PRODUCT</li>
                             <li>SUB PRODUCT</li>
                         </ul>
                     </li>
-                    <li>PRODUCT 2</li>
+                    <li class="product1">
+                        PRODUCT 2
+                        <ul class="products-nested-subnav2">
+                            <li>SUB PRODUCT</li>
+                            <li>SUB PRODUCT</li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li>ABOUT</li>
