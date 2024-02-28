@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            ul{
+                list-style-type: none;
+                background-color: rgb(40, 40, 40);
+                width: 180px;
+                padding-left: 0px;
+                border-radius: 10px;
+            }
+            li{
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: rgb(225, 225, 225);
+                padding-top: 9px;
+                padding-bottom: 9px;
+                padding-left: 20px;
+                border-top: 1px dotted black;
+                user-select: none;
+            }
+
+            .products-subnav{
+                display: none;
+            }
+
+            .products-nested-subnav{
+                display: none;
+            }
+
+            li:hover {
+                background-color: rgb(102, 209, 241);
+                transition-duration: 0.3s;
+            }
+
+            li:hover > .products-subnav{
+                display: block;
+                position: absolute;
+                left: 187px;
+                top: 55px;
+            }
+
+            .product1:hover .products-nested-subnav{
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 180px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <ul>
+            <li>HOME</li>
+            <li>
+                PRODUCTS
+                <ul class="products-subnav">
+                    <li class="product1">
+                        PRODUCT 1
+                        <ul class="products-nested-subnav">
+                            <li>SUB PRODUCT</li>
+                            <li>SUB PRODUCT</li>
+                        </ul>
+                    </li>
+                    <li>PRODUCT 2</li>
+                </ul>
+            </li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+        </ul>
+
+
+    </body>
+</html>
